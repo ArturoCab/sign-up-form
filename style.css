@@ -1,63 +1,124 @@
+:root{
+    --sand-color:#f9af74;
+}
+.sider{
+    display: flex;
+    flex-direction: column;
+    min-width: 25vw;
+    max-width: 35vw;
+    height: 100vh;
+    color: #fafafa;
+    background-image: url('bgimg.jpg');
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
 body{
+    padding: 0;
+    margin: 0;
     display: flex;
     background-color: #f9fafb;
 }
-
-main{
-    background-color: white;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.sider{
-    /*background-image: url('bgimg.jpg');*/
-    flex-shrink: 3;
-    position: relative;
-    width: 100%;
-    z-index: -1;
-}
-.sider-image{
+.odinlogo-body{/*
     position: absolute;
     width: 100%;
-}
-
-span{
-    font-style: italic;
-}
-.main{
-    display: flex;
-    flex-direction: column;
-}
-
-.submit{
-    margin-top: auto;
-}
-
-.odinlogo-body{
-    position: absolute;
-    width: 100%;
-    background-color: black;
-    opacity: 0.6;
     color: white;
     top: 8rem;
     text-align: center;
     font-size: 1.2em;
-    font-family: ROBOT;
-}
-
-footer>p{
-    position: relative;
+    font-family: ROBOT;*/
+    display: flex;
+    flex: 1;
+    max-height: 10vh;
     width: 100%;
-    color: white;
-    top: 0rem;
-    background-color: black;
     text-align: center;
-    
+    align-items: center;
+    justify-content: center;
+    margin-top: 20vh;
+    background-color: black;
+    opacity: 0.6;
 }
 
 .odinlogo-body-face{
     height: 80px;
 }
-.odinlogo>p{
-    align-self: center;
+
+footer{
+    text-align: center;
+    color: #fafafa;
+    width: 100%;
+    background-color: rgba(10,13,17,.6);
+    padding: 0rem;
+}
+
+main{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap:2rem;
+    height: 100vh;
+}
+header{
+    flex: 0 0 auto;
+    padding: 3rem 3rem 0rem 3rem;
+}
+.form-card{
+    padding: 1rem 3rem;
+    background-color: rgb(240,244,248);
+    min-width: calc(100% -3rem -25vw);
+    max-width: calc(100% -3rem -35vw);
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+.field{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+span{
+    font-style: italic;
+}
+
+button[type="submit"]{
+    padding: 0.75rem 1.5rem;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: var(--sand-color);
+    color: #150300;
+}
+
+input{
+    border-radius: 5px;
+    padding: 0.5rem 0.75rem;
+    font-size: 1.1rem;
+}
+
+a,a:hover,a:visited{
+    color: var(--sand-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+a:active{
+    text-decoration: underline;
+}
+label{
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+input:invalid{
+    
+    border: 2px red solid;
 }
